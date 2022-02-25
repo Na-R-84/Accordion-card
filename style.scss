@@ -1,0 +1,150 @@
+
+$Dark-Text :hsl(240, 6%, 50%);
+$Ver-darkText: hsl(237, 12%, 33%);
+$Dividers: hsl(240, 5%, 91%);
+$font:'Kumbh Sans';
+*,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+    ;
+}
+body{
+    background: linear-gradient(0deg, rgba(100,99,231,1) 0%, rgba(176,104,233,1) 100%);
+    min-height: 100%; 
+    background-repeat: no-repeat;
+    font-size:12px;
+    font-family: $font;
+}
+input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  .accordion-container{
+      margin: 7rem 3rem;
+      background-color: #fff;
+      border-radius: 20px;
+      @media (min-width:768px) {
+          display: flex;
+          max-width: 800px;
+          margin: auto;
+          margin-top: 5rem;
+          justify-content: space-between;
+      }
+      .pic{
+          position: relative;
+          .invisible{
+              display: none;
+              position: absolute;
+
+            @media (min-width:768px) {
+                display: inline;
+                top: 40%;
+                left: -70px;
+                height: 150px;
+                width: 150px;
+                // transform: rotate(0deg);
+            }
+
+          }
+            .bg-pattern{
+                //center a "position: absolute" element
+                position: absolute;
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+                text-align: center;
+                @media (min-width:768px) {
+                    content: url(/images/bg-pattern-desktop.svg);
+                    width: 400px;
+                    height: 650px;
+                    left: -110px;
+                    top:-32%;           
+                     // transform: translate(-50%,50%);
+                    transform: rotate(-3deg);
+                    
+                }
+            }
+            .woman-pic{
+            position: absolute;
+            top: 50%;  /* position the top  edge of the element at the middle of the parent */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @media (min-width:768px) {
+                content: url(/images/illustration-woman-online-desktop.svg);
+                transform: translate(-15%, -50%);
+                width: 350px;
+                height:350px;
+            }
+            }
+      }
+    .accordion-body{
+        padding: 1rem;
+        @media (min-width:768px) {
+            max-width: 380px;
+            margin:0 2rem 2rem 0;
+           
+        }
+        
+        h1{
+            text-align: center;
+            padding: 2rem 0;
+            color: #1E1F36;
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            @media (min-width:768px) {
+                padding: 0;
+            }
+        }
+      
+      .accordion{
+            border: none;
+            cursor: pointer;
+            padding: .5rem 0.2rem;
+            width: 100%;
+            text-align: left;
+            outline: none;
+            transition: 0.4s;
+            color: #4B4C5F;
+            background-color: #fff;
+            border-bottom: 2px solid $Dividers;
+            &:hover{
+                color: #F47B56;
+            }
+            
+            &::after{
+                content: url("/images/icon-arrow-down.svg");
+                margin-left: .5rem;
+            }
+            
+        }
+        .active{
+            transition: 1s;
+            font-weight: 700;
+            &::after{
+                content: url("/images/icon-arrow-down.svg");
+                transform: rotate(180deg);
+            }
+        } 
+        
+        .panel{
+            padding: 1rem .5rem;
+            display: none;
+            background-color: white;
+            color: #787887;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+      
+    }
+   
+}
+.attribution { 
+    margin: 5rem 0;
+    font-size: 11px; text-align: center; 
+    a {
+         color: hsl(228, 45%, 44%)
+    }
+}
