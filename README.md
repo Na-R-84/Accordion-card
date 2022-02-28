@@ -1,7 +1,7 @@
 
 ## Welcome! 
 ### Screenshot
-![mobile](./screenshot-mobile.jpg)
+![mobile](/images/screenshot-mobile.jpg)
 ![desktop](./screenshot.jpg)
 ### The challenge
 
