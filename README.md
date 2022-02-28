@@ -1,8 +1,8 @@
 
 ## Welcome! 
 ### Screenshot
-
-![](./screenshot.jpg)
+![mobile](./screenshot-mobile.jpg)
+![desktop](./screenshot.jpg)
 ### The challenge
 
 Users should be able to:
@@ -16,6 +16,5 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 -Javascript
