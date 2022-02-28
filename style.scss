@@ -27,37 +27,44 @@ body{
         margin: auto;
         margin-top: 5rem;
         justify-content: space-between;
-        overflow: hidden;
     }
-
+   
     
     .pic{
         display: flex;
         justify-content: center;
         position: relative;
 
-        // .invisible{
-        //     background-image: url('/images/illustration-box-desktop.svg');
-        //     display: none;
-        //     @media (min-width:768px) {
-        //         display: block;
-        //         position:absolute;
-        //         top: 35%;
-        //         left:-95px;
-        //         height: 150px;
-        //         width: 150px;
-        //         z-index: 2;
+    
+        .invisible{
+            background-image: url('/images/illustration-box-desktop.svg');
+            display: none;
+            @media (min-width:768px) {
+                display: block;
+                background-position: center; /* Center the image */
+                background-repeat: no-repeat; /* Do not repeat the image */
+                background-size: cover;
+                position: absolute;
+                top: 41%;
+                left: -39px;
+                height: 122px;
+                width: 82px;
+                z-index: 3;
                     
-        //         // transform: rotate(0deg);
-        //     }
-        // }
+                // transform: rotate(0deg);
+            }
+        }
 
         .position{
             position: absolute;
             top: -13px;
             @media (min-width:768px) {
                 top: 0;
+                overflow: hidden;
             }
+            }
+
+
             .bg-pattern{
                 //center a "position: absolute" element
                 background: url('/images/bg-pattern-mobile.svg');
@@ -70,8 +77,8 @@ body{
                 margin-left: 1.5rem;
                 @media (min-width:768px) {
                     background: url('/images/bg-pattern-desktop.svg');
-                    margin-top: -27rem;
-                    margin-left: -95px;
+                    margin-top: -28rem;
+                    margin-left: -53px;
                     width: 604px;
                     height: 529px;
                     background-repeat: no-repeat;
@@ -92,15 +99,16 @@ body{
                     background-image: url('/images/illustration-woman-online-desktop.svg');
                     background-repeat: no-repeat;
                     background-size: cover;
-                    width: 312px;
-                    height: 237px;
-                    margin-left: 12rem;
-                    margin-top: 10px;
-                    z-index: 1;
+                    width: 299px;
+                    height: 229px;
+                    margin-left: 16rem;
+                    margin-top: 48px;
+                    z-index: 2;
                     position: relative; // need it for Z-index
                 }
             }
         }
+     
     }
     .accordion-body{
         @media (min-width:768px) {
@@ -116,13 +124,13 @@ body{
             font-size: 1.5rem;
             margin-top: 8rem;
             @media (min-width:768px) {
-                padding: 1rem 0;
+                padding: 1rem 2;
                 margin: 0;
                 text-align: left;
             }
         }
          .accordion-content{
-
+            padding: 0 2rem;
           .accordion{
                 border: none;
                 cursor: pointer;
@@ -173,7 +181,7 @@ body{
         
     }
    
-}
+
 .attribution { 
     margin: 5rem 0;
     font-size: 11px; text-align: center; 

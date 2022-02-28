@@ -31,7 +31,6 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    overflow: hidden;
   }
 }
 
@@ -45,6 +44,28 @@ body {
   position: relative;
 }
 
+.accordion-container .pic .invisible {
+  background-image: url("/images/illustration-box-desktop.svg");
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .accordion-container .pic .invisible {
+    display: block;
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    position: absolute;
+    top: 41%;
+    left: -39px;
+    height: 122px;
+    width: 82px;
+    z-index: 3;
+  }
+}
+
 .accordion-container .pic .position {
   position: absolute;
   top: -13px;
@@ -53,10 +74,11 @@ body {
 @media (min-width: 768px) {
   .accordion-container .pic .position {
     top: 0;
+    overflow: hidden;
   }
 }
 
-.accordion-container .pic .position .bg-pattern {
+.accordion-container .pic .bg-pattern {
   background: url("/images/bg-pattern-mobile.svg");
   width: 257px;
   height: 110px;
@@ -71,10 +93,10 @@ body {
 }
 
 @media (min-width: 768px) {
-  .accordion-container .pic .position .bg-pattern {
+  .accordion-container .pic .bg-pattern {
     background: url("/images/bg-pattern-desktop.svg");
-    margin-top: -27rem;
-    margin-left: -95px;
+    margin-top: -28rem;
+    margin-left: -53px;
     width: 604px;
     height: 529px;
     background-repeat: no-repeat;
@@ -82,7 +104,7 @@ body {
   }
 }
 
-.accordion-container .pic .position .woman-pic {
+.accordion-container .pic .woman-pic {
   background-image: url("/images/illustration-woman-online-mobile.svg");
   width: 277px;
   height: 200px;
@@ -95,26 +117,26 @@ body {
 }
 
 @media (min-width: 768px) {
-  .accordion-container .pic .position .woman-pic {
+  .accordion-container .pic .woman-pic {
     background-image: url("/images/illustration-woman-online-desktop.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 312px;
-    height: 237px;
-    margin-left: 12rem;
-    margin-top: 10px;
-    z-index: 1;
+    width: 299px;
+    height: 229px;
+    margin-left: 16rem;
+    margin-top: 48px;
+    z-index: 2;
     position: relative;
   }
 }
 
 @media (min-width: 768px) {
-  .accordion-container .accordion-body {
+  .accordion-body {
     max-width: 380px;
   }
 }
 
-.accordion-container .accordion-body h1 {
+.accordion-body h1 {
   text-align: center;
   padding-bottom: 2rem;
   color: #1E1F36;
@@ -123,14 +145,18 @@ body {
 }
 
 @media (min-width: 768px) {
-  .accordion-container .accordion-body h1 {
-    padding: 1rem 0;
+  .accordion-body h1 {
+    padding: 1rem 2;
     margin: 0;
     text-align: left;
   }
 }
 
-.accordion-container .accordion-body .accordion-content .accordion {
+.accordion-body .accordion-content {
+  padding: 0 2rem;
+}
+
+.accordion-body .accordion-content .accordion {
   border: none;
   cursor: pointer;
   padding: .75rem 0.2rem;
@@ -144,36 +170,36 @@ body {
   border-bottom: 2px solid #e7e7e9;
 }
 
-.accordion-container .accordion-body .accordion-content .accordion:hover {
+.accordion-body .accordion-content .accordion:hover {
   color: #F47B56;
 }
 
-.accordion-container .accordion-body .accordion-content .accordion::after {
+.accordion-body .accordion-content .accordion::after {
   content: url("/images/icon-arrow-down.svg");
   margin-left: .5rem;
 }
 
-.accordion-container .accordion-body .accordion-content .accordion.last-item {
+.accordion-body .accordion-content .accordion.last-item {
   margin-bottom: 3rem;
 }
 
-.accordion-container .accordion-body .accordion-content .active {
+.accordion-body .accordion-content .active {
   -webkit-transition: 1s;
   transition: 1s;
   font-weight: 700;
 }
 
-.accordion-container .accordion-body .accordion-content .active::after {
+.accordion-body .accordion-content .active::after {
   content: url("/images/icon-arrow-down.svg");
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.accordion-container .accordion-body .accordion-content .active.last-item {
+.accordion-body .accordion-content .active.last-item {
   margin-bottom: 0;
 }
 
-.accordion-container .accordion-body .accordion-content .panel {
+.accordion-body .accordion-content .panel {
   padding: 1rem .5rem;
   display: none;
   background-color: white;
